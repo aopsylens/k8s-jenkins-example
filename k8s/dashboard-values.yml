@@ -9,3 +9,11 @@ ingress:
     - /
   annotations:
     kubernetes.io/ingress.class: traefik
+rbac:
+  create: false
+serviceAccount:
+  create: true
+  name: kubernetes-dashboard
+protocolHttp: true
+extraArgs:
+  - --enable-insecure-login
