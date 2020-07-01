@@ -10,3 +10,5 @@ ssl:
   permanentRedirect: true
   generateTLS: true
   defaultCN: "*.localhost"
+rbac:
+  enabled: true
