@@ -4,7 +4,7 @@ master:
   adminPassword: admin
   numExecutors: 1
   installPlugins:
-    - kubernetes
+    - kubernetes:1.21.1
     - workflow-job
     - workflow-aggregator
     - credentials-binding
