@@ -62,11 +62,21 @@ Install Jenkins
 
 ```
 helm install jenkins stable/jenkins --values k8s/jenkins-values.yml
+kubernetes apply -f rbac-agent.yaml
 ```
 
 Add ip from lb and domain jenkins.localhost to /etc/hosts
 
 Access to dashboard https://jenkins.localhost with creds admin/admin
+
+Create credentials for docker and github
+
+Install plugins:
+    - kubernetes
+    - workflow-aggregator
+    - git
+    - docker-workflow
+    - pipeline-utility-steps
 
 Build
 ---

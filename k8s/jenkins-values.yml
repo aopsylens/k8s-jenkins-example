@@ -1,5 +1,12 @@
 master:
   jenkinsUrl: "jenkins.localhost"
+  numExecutors: 0
+  installPlugins:
+    - kubernetes
+    - workflow-aggregator
+    - git
+    - docker-workflow
+    # - pipeline-utility-steps
   ingress:
     enabled: true
     hostName: jenkins.localhost
