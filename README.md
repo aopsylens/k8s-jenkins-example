@@ -78,6 +78,8 @@ Install plugins:
     - docker-workflow
     - pipeline-utility-steps
 
+Keep in mind that a workspace volume is automatically created and shared between containers in the pod, which means that any change on the workspace will be available for other containers. For instance, if we use the maven container to create the packaged jar file, it will be available for the docker container to create the docker image. Moreover, in order to speed up the building process, do not forget to create a volume for the maven ~/.m2 folder, in order to share downloaded dependencies between job runs.
+
 Build
 ---
 1. Build project
